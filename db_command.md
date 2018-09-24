@@ -1,4 +1,4 @@
-#### 一、ubuntu系统中Mysql5.7操作
+### 一、ubuntu系统中Mysql5.7操作
 1.启动数据库：sudo service mysql start
 
 2.关闭数据库：sudo service mysql stop
@@ -47,7 +47,7 @@
 12.删除用户:DROP USER '用户名'@'HOST';
 
 
-#### 二、ubuntu系统中MongoDB操作
+### 二、ubuntu系统中MongoDB操作
 
 1.启动数据库:service mongod start
 
@@ -78,3 +78,52 @@
 13.显示当前所有用户:show users;
 
 14.删除用户:db.removeUser("userName");
+
+### 三、ubuntu系统中Redis操作
+
+1.查看数据库是否启动:ps aux | grep redis | grep grep
+
+2.启动数据库:
+
+```angular2html
+    指定路径操作:sudo /etc/init.d/redis-server start
+    用服务操作:service redis-server start
+```
+
+3.重启数据库:
+
+```angular2html
+    指定路径操作:sudo /etc/init.d/redis-server restart
+    用服务操作:service redis-server restart
+```
+
+4.关闭数据库:
+
+```angular2html
+    指定路径操作:sudo /etc/init.d/redis-server stop
+    用服务操作:service redis-server stop
+```
+
+5.连接客户端:redis-cli -h HOST -p 6379 -a 密码 -->默认是没有密码的，需要更改配置文件
+
+6.配置文件：
+
+```angular2html
+    1)找到配置文件: whereis redis.conf
+    2)打开配置文件: vim /etc/redis/reids.conf --> 这是我电脑的路径
+    3)在命令模式下输入: /requirepass password
+    4)在编辑模式下将password改成你自己想设置的密码
+    5)在命令模式下输入: :wq   -->保存退出
+    6)重启redis即可生效: 见步骤3.重启数据库
+```
+
+7.如果要允许远程连接，需要配置文件：
+ 
+```angular2html
+    1)找到配置文件: whereis redis.conf
+    2)打开配置文件: vim /etc/redis/reids.conf --> 这是我电脑的路径
+    3)在命令模式下输入： /bind 127.0.0.1 ::1
+    4)在编辑模式下将bind 127.0.0.1 ::1 改成bind 0.0.0.0 ::1
+    5)在命令模式下输入: :wq  -->保存退出
+    6)重启redis即可生效: 见步骤3.重启数据库
+```
