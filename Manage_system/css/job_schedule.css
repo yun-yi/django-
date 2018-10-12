@@ -1,0 +1,30 @@
+
+div form ul li:nth-child(4){
+    height: 200px;
+}
+div form ul li:nth-child(4) span{
+    height:200px;
+    display:block;
+    vetical-align:top;
+    float:left;
+}
+div form ul li:nth-child(4) textarea{
+    border: 1px solid #042929d6;
+    width: 50%;
+    height: 200px;
+    background: none;
+    font-size: 45px;
+    outline: none;
+    padding-left: 5px;
+}
+div form ul li:nth-child(5){
+    padding-left: 0;
+    text-align: center;
+}
+div form ul li:nth-child(5) input{
+    background: deepskyblue;
+    width: 25%;
+    border: none;
+    font-weight: bold;
+    color: azure;
+}
