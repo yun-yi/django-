@@ -2,10 +2,13 @@
   <dictionary name="yunyi">
     <words>
       <w>dbname</w>
+      <w>geetest</w>
       <w>mongo</w>
       <w>mongod</w>
+      <w>postpresql</w>
       <w>tbname</w>
       <w>uroot</w>
+      <w>webdriver</w>
     </words>
   </dictionary>
 </component>
